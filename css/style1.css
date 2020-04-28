@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  text-align: center;
+  font-size: 1.4rem
+}
+
+#wrapper{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#header{
+  background: #008080;
+  padding: 20px;
+}
+
+#main{
+}
+
+#footer{
+  background: #2e8b57;
+  clear: both;
+  padding: 50px;
+  position: relative;
+}
+
+[class^="section-"]{
+  margin: 0 auto 80px;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h1{
+  font-size: 3.0rem;
+  color: #fff;
+}
+
+h2{
+  font-size: 2.3rem;
+  border-bottom: double 1px #222;
+  margin: 20px;
+}
+
+.float-description{
+  width: 100%;
+  text-align: left;
+  padding: 20px 40px;
+}
+
+pre{
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #B0585A;
+}
+
+pre span{
+  color: #999;
+}
+
+.float-text{
+  line-height: 2.1;
+  border-left: 5px solid #F1622F;
+  padding-left: 10px;
+  margin: 9px;
+}
+
+.column{
+  background: #eee;
+  color: #525252;
+  border: none;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.omake-title{
+  background: #fff;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 8px;
+  margin: 0 0 9px 0;
+}
+
+.omake-talk{
+  background: #eee;
+  color: #525252;
+  margin: 15px;
+  padding: 30px;
+}
+
+.omake-talk li{
+  margin-left: 20px;
+}
+
+/* セッション１で使用 */
+.float-item.left{
+  float: left;
+}
+
+.float-item.right{
+  float: right;
+}
+
+/* フロートボックスの調整 */
+.float-item{
+  width: 300px;
+  margin: 8px;
+  padding: 8px;
+  float: left;
+  border: solid 1px #999;
+}
+
+.float-item img{
+  display: block;
+  width: 100%;
+}
+
+.float-item p{
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.section-footer{
+  padding: 20px;
+  background: #98fb98;
+  clear: both;
+}
+
+.footer-box{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+/* フロートレイアウトにチャレンジ */
+.aside{
+  width: 300px;
+  background: #ff8c00;
+  float: right;
+}
+
+.aside p{
+  padding: 15px 0;
+}
+
+.layout-box{
+  width: 700px;
+  background: #a0522d;
+  float: left;
+}
+
+.layout-box p{
+  font-size: 2.0rem;
+  width: 220px;
+  height: 150px;
+  margin: 5px;
+  background: #f0e68c;
+  border: solid 1px #fff;
+  float: left;
+  padding: 65px 0;
+  line-height: 1;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>（作成中）無題ドキュメント</title>
+    <link rel="stylesheet" href="css/style1.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <h1>floatを使ってみよう！</h1>
+      </header>
+      <main id="main">
+        <section>
+          <h2>floatとは？</h2>
+          <div class="float-description">
+            <div class="description-inner">
+              <p class="float-text">
+                要素を右もしくは左寄せにするプロパティです。
+                <br>
+                使い方は下記の通りで、この書き方だと左寄せになります。左寄せにしたいときは、rightではなくleftと入れてください。
+                <br>
+                なお、初期値はnoneになります。         
+              </p>
+<pre>
+
+<code>セレクタ{
+  float: right;
+}
+
+</code>
+</pre>
+              <p class="float-text">
+                右寄せ、もしくは左寄せにした要素は高さ(height)がなくなり、下に続く要素が回り込んできます。これによって思わぬレイアウト崩れが発生する可能性があるので、それを防ぐために、続く要素にclearというプロパティを仕込む必要があります。
+              </p>
+<pre>
+<code>
+&lt;div class=F style=float: left;&gt;<span>クラスFにfloatをかけました</span>
+  &lt;div&gt;コンテンツ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=N style=clear: both&gt;次のコンテンツ&lt;/div&gt;<span>このクラスNが回り込んでくるため、これにclear: bothをかける。</span>
+</code>
+</pre>
+              <p class="float-text">
+                clearプロパティはfloatを解除することができ、テキストの回り込みを防ぎます。left（左寄せを解除）、right（右寄せを解除）、both（両方を解除）
+              </p>
+              <p class="float-text column">
+                昔はこのclearプロパティをつけるためだけに、何も入っていない空のタグをhtmlに書き足すことがありました。何も入っていないタグを入れるのは、HTMLというファイルの特性上あまり望ましいことではありません。そこで、htmlに空のタグを入れずに、綺麗にclearプロパティをあてる手法が誕生しました。clearfixという手法ですが、詳しくは調べてみましょう。
+              </p>
+              <p class="float-text">
+                それでは、早速以下の画像などにfloatをあてて、レイアウトを作ってみましょう。ページ内の要素にはclassが振ってあります。ソースコードを確認するなどして、使ってみてください。自分で管理しやすいように、付け足したり書き直したりするのもありです。
+              </p>
+            </div>
+            <div class="omake-talk">
+              <p class="omake-title">ちょっといい話</p>
+              <ul>
+                <li>classは、半角スペースを入れることで複数挿入することができます。                                                   idはこのような使い方はできませんのでご注意。</li>
+                <li>
+                  imgタグのwidthとheightはcssでも調整できます。width100%にすると、コンテンツの幅に合わせて大きさを自動的に変えてくれます（widthが固定されてるなどで、親要素の幅が変わらないと大きさは変わらないので注意）。
+                </li>
+                <li>cssでのセレクタの指定方法などを調べてみよう。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="section-one clearfix">
+          <h2>左寄せでやってみよう</h2>
+          <div class="float-item left">
+            <img src="img/content.jpg">
+            <p>この画像を左寄せにしてね</p>
+          </div>
+          <div class="float-item right">
+            <img src="img/content.jpg">
+            <p>この画像を右寄せにしてね</p>
+          </div>
+          <footer class="section-footer">
+            <p>ここの部分が写真の下に来るように</p>
+          </footer>
+        </section>
+        <section class="section-two clearfix">
+          <h2>画像を並べてみよう</h2>
+          <div class="float-item">
+            <img src="img/content.jpg">
+            <p>フロートボックスその１</p>
+          </div>
+          <div class="float-item">
+            <img src="img/content.jpg">
+            <p>フロートボックスその２</p>
+          </div>
+          <div class="float-item">
+            <img src="img/content.jpg">
+            <p>フロートボックスその３</p>
+          </div>
+          <footer class="section-footer">
+            <p>ここの部分が写真の下に来るように</p>
+          </footer>
+          <!-- ::after -->
+        </section>
+        <section class="section-three clearfix">
+          <h2>フロートレイアウトにチャレンジ</h2>
+          <div class="layout-box clearfix">
+            <p>ボックス１</p>
+            <p>ボックス２</p>
+            <p>ボックス３</p>
+            <!-- ::after -->
+          </div>
+          <aside class="aside">
+            <p>ナビゲーション１</p>
+            <p>ナビゲーション２</p>
+            <p>ナビゲーション３</p>
+            <p>ナビゲーション４</p>
+            <p>ナビゲーション５</p>
+          </aside>
+          <!-- ::after -->
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="footer-box">
+          <address>〒929292 アメリカ 22-12</address>
+          <p>TEL： 099-2132-2223</p>
+          <p>© 2020 ホネホネ王国株式会社 All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
